@@ -22,7 +22,7 @@
 		30C9AC2725203EE100A1AAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C9AC2625203EE100A1AAA6 /* Assets.xcassets */; };
 		30C9AC2A25203EE100A1AAA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C9AC2925203EE100A1AAA6 /* Preview Assets.xcassets */; };
 		30C9AC4325203F5100A1AAA6 /* DeepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9AC4225203F5100A1AAA6 /* DeepViewModel.swift */; };
-		E750D3A3254EBC5A00333BAB /* jphackclassifer 5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E750D3A2254EBC5A00333BAB /* jphackclassifer 5.mlmodel */; };
+		E750D3AE254EC82A00333BAB /* jphackclassifer 5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E750D3AD254EC82A00333BAB /* jphackclassifer 5.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,7 +87,7 @@
 		30C9AC2B25203EE100A1AAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C9AC2C25203EE100A1AAA6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		30C9AC4225203F5100A1AAA6 /* DeepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepViewModel.swift; sourceTree = "<group>"; };
-		E750D3A2254EBC5A00333BAB /* jphackclassifer 5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = "jphackclassifer 5.mlmodel"; path = "../../../createML/jphackclassifer 5.mlmodel"; sourceTree = "<group>"; };
+		E750D3AD254EC82A00333BAB /* jphackclassifer 5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "jphackclassifer 5.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +136,7 @@
 				30C9AC1E25203EE000A1AAA6 /* ContentView.swift */,
 				30C9AC2025203EE000A1AAA6 /* NotificationController.swift */,
 				30C9AC2225203EE000A1AAA6 /* NotificationView.swift */,
-				E750D3A2254EBC5A00333BAB /* jphackclassifer 5.mlmodel */,
+				E750D3AD254EC82A00333BAB /* jphackclassifer 5.mlmodel */,
 				30C9AC2425203EE000A1AAA6 /* ComplicationController.swift */,
 				30C9AC2625203EE100A1AAA6 /* Assets.xcassets */,
 				301CCEC32520C88300DCCA4F /* nc190948.wav */,
@@ -292,10 +292,10 @@
 				30C9AC2125203EE000A1AAA6 /* NotificationController.swift in Sources */,
 				30C9AC1F25203EE000A1AAA6 /* ContentView.swift in Sources */,
 				30C9AC4325203F5100A1AAA6 /* DeepViewModel.swift in Sources */,
+				E750D3AE254EC82A00333BAB /* jphackclassifer 5.mlmodel in Sources */,
 				30C9AC2525203EE000A1AAA6 /* ComplicationController.swift in Sources */,
 				30C9AC1D25203EE000A1AAA6 /* normal_activityApp.swift in Sources */,
 				30C9AC2325203EE000A1AAA6 /* NotificationView.swift in Sources */,
-				E750D3A3254EBC5A00333BAB /* jphackclassifer 5.mlmodel in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
