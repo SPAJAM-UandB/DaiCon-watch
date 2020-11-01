@@ -1,0 +1,6 @@
+framework module Pods_normal_activity_WatchKit_Extension {
+  umbrella header "Pods-normal_activity WatchKit Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}
