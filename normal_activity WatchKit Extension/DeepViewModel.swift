@@ -21,13 +21,6 @@ struct ModelConstants{
     static let sensorsUpdateInterval = 1.0 / 10.0
     static let stateInLength = 400
 }
-
-struct Sound_List: Identifiable {
-    var id = UUID()     // ユニークなIDを自動で設定
-    var name : String
-}
-
-
  
 class DeepViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     
@@ -38,28 +31,10 @@ class DeepViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     internal var memo_sound: AVAudioPlayer!
     private var audioRecorder: AVAudioRecorder!
     let motionManager = CMMotionManager()
-    let locationManager = CLLocationManager()
         
     @Published var activity_name:[String : Double] = ["label":0.0]
     @Published var label:String = "Standing"
-    @Published var filename:String = ""
-    @Published var select_filename:String = ""
-    @Published var select_state:Bool = false
-    @Published var select_latitude : Double = 0.0
-    @Published var select_longitude: Double = 0.0
     @Published var select_label:String = ""
-    
-    
-    @Published var latitude : Double = 0.0
-    @Published var longitude: Double = 0.0
-    
-    @Published var region = MKCoordinateRegion(center: .init(latitude: 0.0, longitude: 0.0), latitudinalMeters: 200, longitudinalMeters: 200)
-    
-    @Published var sound_lists = [
-        Sound_List(name: "")
-    ]
-    
-    @Published var file_names:[String] = []
     
     
     private let settings           = [
@@ -88,115 +63,9 @@ class DeepViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
     
     override init(){
         super.init()
-        self.delete_all_files()
-        self.setup_locationmanager()
-        self.setup_passfile()
     }
-    
-    
-    func setup_passfile(){
-        let filenames:[String] = FileManager.default.subpaths(atPath: NSHomeDirectory() + "/Documents/CSV/")!
-        for filename in filenames{
-            self.sound_lists.append(Sound_List(name: String(filename.split(separator: ".")[0])))
-        }
-    }
-    
-    func set_filename(){
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy_MM_dd_HH_mm_ss"
-        let now = Date()
-        self.filename = formatter.string(from: now)
-    }
-
-    func get_audio_filename(file_name:String) -> URL {
-        let docspath = URL(string: NSHomeDirectory() + "/Documents/Audio/")!
-        let music_path: String = file_name + ".m4a"
-        let audiopath = docspath.appendingPathComponent(music_path)
-        
-        return audiopath
-    }
-    
-    internal func play(file_name:String) {
-        let music_path = URL(string: NSHomeDirectory() + "/Documents/Audio/" + file_name + ".m4a")!
-        
-        do{
-            datasound = try AVAudioPlayer(contentsOf: music_path)
-            datasound.volume = 1.0
-            datasound.play()
-        }catch{
-            print("fail")
-        }
-    }
-    
-    func delete_file(filename:String){
-        do{
-            try FileManager.default.removeItem(atPath: NSHomeDirectory() + "/Documents/CSV/" + filename + ".csv")
-            try FileManager.default.removeItem(atPath: NSHomeDirectory() + "/Documents/Audio/" + filename + ".m4a")
-        }catch{
-            print("error")
-        }
-    }
-    
-    func setup_locationmanager() {
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.activityType    = .fitness
-        locationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
-        locationManager.delegate        = self
-        //        locationManager.distanceFilter = 5
-    }
-    
-    func locationManager(_ manager: CLLocationManager,didUpdateLocations locations: [CLLocation]){
-        self.latitude  = locations.last!.coordinate.latitude
-        self.longitude = locations.last!.coordinate.longitude
-    }
-    
-    func set_select_location(){
-        do {
-            try self.select_latitude  = Double(String(contentsOfFile: NSHomeDirectory() + "/Documents/CSV/" + self.select_filename + ".csv").split(separator: ",")[0])!
-            try self.select_longitude = Double(String(contentsOfFile: NSHomeDirectory() + "/Documents/CSV/" + self.select_filename + ".csv").split(separator: ",")[1])!
-        }catch{
-            print("Fail!")
-        }
-    }
-    
-    func get_icon(filename:String) ->String{
-        do {
-
-            let label = try String(String(contentsOfFile: NSHomeDirectory() + "/Documents/CSV/" + filename + ".csv").split(separator: ",")[2])
-            return label
-        }catch{
-//            print("Fail !!!")
-            return "fail"
-        }
-    }
-    
-    func delete_all_files(){
-        let csvpath = NSHomeDirectory() + "/Documents/CSV"
-        let csvnames = try! FileManager.default.contentsOfDirectory(atPath: csvpath)
-
-        for fileName in csvnames {
-            let filePathName = "\(csvpath)/\(fileName)"
-            try! FileManager.default.removeItem(atPath: filePathName)
-        }
-
-        let audiopath = NSHomeDirectory() + "/Documents/Audio"
-        let audionames = try! FileManager.default.contentsOfDirectory(atPath: audiopath)
-
-        for fileName in audionames {
-            let filePathName = "\(audiopath)/\(fileName)"
-            try! FileManager.default.removeItem(atPath: filePathName)
-        }
-        
-        let csv_directory   = NSHomeDirectory() + "/Documents/CSV"
-        let audio_directory = NSHomeDirectory() + "/Documents/Audio"
-        try! FileManager.default.createDirectory(atPath:   csv_directory, withIntermediateDirectories: true, attributes: nil)
-        try! FileManager.default.createDirectory(atPath: audio_directory, withIntermediateDirectories: true, attributes: nil)
-    }
-    
 
     func record_start(){
-        
-        locationManager.startUpdatingLocation()
         motionManager.deviceMotionUpdateInterval = ModelConstants.sensorsUpdateInterval
         
         motionManager.startDeviceMotionUpdates( to: OperationQueue.current!, withHandler:{
@@ -239,94 +108,16 @@ class DeepViewModel : NSObject, ObservableObject, CLLocationManagerDelegate {
                 self.nature_state = false
                 self.m_sound()
             }
-            
-//            if self.passlabel[0] == "start_listen" && self.passlabel[1] == "start_listen" && self.passlabel[2] == "start_listen" && self.passlabel[3] == "start_listen" && self.passlabel[4] == "start_listen" && self.nature_state == false && self.memo_state == false{
-//
-//                self.n_sound()
-//                self.set_filename()
-//
-//                let session = AVAudioSession.sharedInstance()
-//                try! session.setCategory(AVAudioSession.Category.playAndRecord)
-//                try! session.setActive(true)
-//
-//                self.audioRecorder = try! AVAudioRecorder(url: self.get_audio_filename(file_name: self.filename), settings: self.settings)
-//                self.audioRecorder.record()
-//
-//                self.nature_state = true
-//
-//            }else if self.passlabel[0] == "start_memo" && self.passlabel[1] == "start_memo" && self.passlabel[2] == "start_memo" && self.passlabel[3] == "start_memo" && self.passlabel[4] == "start_memo" && self.nature_state == false && self.memo_state == false{
-//
-//                self.m_sound()
-//                self.set_filename()
-//
-//                let session = AVAudioSession.sharedInstance()
-//                try! session.setCategory(AVAudioSession.Category.playAndRecord)
-//                try! session.setActive(true)
-//
-//                self.audioRecorder = try! AVAudioRecorder(url: self.get_audio_filename(file_name: self.filename), settings: self.settings)
-//                self.audioRecorder.record()
-//
-//                self.memo_state = true
-//
-//            }else if (self.passlabel[0] == "end_listen" || self.passlabel[0] == "end_memo") && (self.passlabel[1] == "end_listen" || self.passlabel[1] == "end_memo") && (self.passlabel[2] == "end_listen" || self.passlabel[2] == "end_memo") && (self.passlabel[3] == "end_listen" || self.passlabel[3] == "end_memo") && (self.passlabel[4] == "end_listen" || self.passlabel[4] == "end_memo") && self.nature_state == true{
-//
-//                self.audioRecorder.stop()
-//                self.sound_lists.append(Sound_List(name: self.filename))
-//                self.save_file(label:"nature")
-//                self.n_sound()
-//                self.nature_state = false
-//
-//            }else if (self.passlabel[0] == "end_listen" || self.passlabel[0] == "end_memo") && (self.passlabel[1] == "end_listen" || self.passlabel[1] == "end_memo") && (self.passlabel[2] == "end_listen" || self.passlabel[2] == "end_memo") && (self.passlabel[3] == "end_listen" || self.passlabel[3] == "end_memo") && (self.passlabel[4] == "end_listen" || self.passlabel[4] == "end_memo") && self.memo_state == true{
-//
-//                self.audioRecorder.stop()
-//                self.sound_lists.append(Sound_List(name: self.filename))
-//                self.save_file(label:"memo")
-//                self.m_sound()
-//                self.memo_state = false
-//
-//            }else if self.passlabel[0] == "kamehameha" && self.passlabel[1] == "kamehameha" && self.passlabel[2] == "kamehameha" && self.passlabel[3] == "kamehameha" && self.passlabel[4] == "kamehameha" && self.nature_state == false && self.memo_state == false{
-//
-//                self.kame_sound()
-//            }
         })
     }
     
     func record_end(){
         motionManager.stopDeviceMotionUpdates()
-        locationManager.stopUpdatingLocation()
         if self.nature_state == true{
-            
-            self.sound_lists.append(Sound_List(name: self.filename))
-            self.save_file(label:"nature")
-            self.n_sound()
             self.nature_state = false
-            
         }else if self.memo_state == true{
-            
-            self.audioRecorder.stop()
-            self.sound_lists.append(Sound_List(name: self.filename))
-            self.save_file(label:"memo")
-            self.m_sound()
             self.memo_state = false
-            
         }
-    }
-    
-    func save_file(label:String){
-        let filePath = NSHomeDirectory() + "/Documents/CSV/" + self.filename + ".csv"
-        let recortText = "\(self.latitude),\(self.longitude),\(label)"
-        try! recortText.write(toFile: filePath, atomically: true, encoding: String.Encoding.utf8)
-        print(recortText)
-    }
-    
-    func pon_sound(){
-        guard let audioPath = Bundle.main.path(forResource: "pon", ofType:"mp3") else{
-            return print("error")
-        }
-        let path = URL(fileURLWithPath: audioPath)
-        audioPlayer = try! AVAudioPlayer(contentsOf: path)
-        audioPlayer.volume = 1.0
-        audioPlayer.play()
     }
     
     func kame_sound(){
