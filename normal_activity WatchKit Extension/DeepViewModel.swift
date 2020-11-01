@@ -15,6 +15,8 @@ import MapKit
 
 import CoreMotion
 
+import Alamofire
+
 
 struct ModelConstants{
     static let predictionWindowSize = 20

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23B9D8608004BF32B30CBB50 /* Pods_normal_activity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4665A2484B93E5A2A0A4500 /* Pods_normal_activity.framework */; };
 		301CCEC52520C88300DCCA4F /* nc190948.wav in Resources */ = {isa = PBXBuildFile; fileRef = 301CCEC32520C88300DCCA4F /* nc190948.wav */; };
 		30405DAE2522543800785426 /* kamehameha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30405DAD2522543800785426 /* kamehameha.mp3 */; };
 		30405DB32522BB4900785426 /* memo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 30405DB22522BB4800785426 /* memo.mp3 */; };
@@ -22,7 +23,9 @@
 		30C9AC2725203EE100A1AAA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C9AC2625203EE100A1AAA6 /* Assets.xcassets */; };
 		30C9AC2A25203EE100A1AAA6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30C9AC2925203EE100A1AAA6 /* Preview Assets.xcassets */; };
 		30C9AC4325203F5100A1AAA6 /* DeepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C9AC4225203F5100A1AAA6 /* DeepViewModel.swift */; };
+		51843CF011DE85E8533F71B8 /* Pods_normal_activity_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD23EE45E95C633D6D968F8F /* Pods_normal_activity_WatchKit_App.framework */; };
 		E750D3AE254EC82A00333BAB /* jphackclassifer 5.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = E750D3AD254EC82A00333BAB /* jphackclassifer 5.mlmodel */; };
+		F2F212C130D74DA8DDE04767 /* Pods_normal_activity_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8289859B38E3C15A83F46E7D /* Pods_normal_activity_WatchKit_Extension.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +71,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		14CD4726D8A45B8C9DA0404A /* Pods-normal_activity.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-normal_activity.debug.xcconfig"; path = "Target Support Files/Pods-normal_activity/Pods-normal_activity.debug.xcconfig"; sourceTree = "<group>"; };
+		2BBEF77F63767BB7F42B62EF /* Pods-normal_activity WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-normal_activity WatchKit App.release.xcconfig"; path = "Target Support Files/Pods-normal_activity WatchKit App/Pods-normal_activity WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		301CCEC32520C88300DCCA4F /* nc190948.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = nc190948.wav; sourceTree = "<group>"; };
 		30405DAD2522543800785426 /* kamehameha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kamehameha.mp3; sourceTree = "<group>"; };
 		30405DB22522BB4800785426 /* memo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = memo.mp3; sourceTree = "<group>"; };
@@ -87,7 +92,14 @@
 		30C9AC2B25203EE100A1AAA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30C9AC2C25203EE100A1AAA6 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		30C9AC4225203F5100A1AAA6 /* DeepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepViewModel.swift; sourceTree = "<group>"; };
+		8289859B38E3C15A83F46E7D /* Pods_normal_activity_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_normal_activity_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E4ABC72C506EB14A923B9C9 /* Pods-normal_activity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-normal_activity.release.xcconfig"; path = "Target Support Files/Pods-normal_activity/Pods-normal_activity.release.xcconfig"; sourceTree = "<group>"; };
+		A4665A2484B93E5A2A0A4500 /* Pods_normal_activity.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_normal_activity.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4ABB7F3E2E1B0C7E47ECDE1 /* Pods-normal_activity WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-normal_activity WatchKit App.debug.xcconfig"; path = "Target Support Files/Pods-normal_activity WatchKit App/Pods-normal_activity WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		A71EB18A8449D81E3C6BF155 /* Pods-normal_activity WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-normal_activity WatchKit Extension.debug.xcconfig"; path = "Target Support Files/Pods-normal_activity WatchKit Extension/Pods-normal_activity WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		AD23EE45E95C633D6D968F8F /* Pods_normal_activity_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_normal_activity_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E750D3AD254EC82A00333BAB /* jphackclassifer 5.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "jphackclassifer 5.mlmodel"; sourceTree = "<group>"; };
+		F296BAFBD5FA6F2536AE33D0 /* Pods-normal_activity WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-normal_activity WatchKit Extension.release.xcconfig"; path = "Target Support Files/Pods-normal_activity WatchKit Extension/Pods-normal_activity WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2F212C130D74DA8DDE04767 /* Pods_normal_activity_WatchKit_Extension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7C4403F5146DDF444AE3D1D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				51843CF011DE85E8533F71B8 /* Pods_normal_activity_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6A34112F7DC3935F708046C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23B9D8608004BF32B30CBB50 /* Pods_normal_activity.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +136,8 @@
 				30C9AC0F25203EDF00A1AAA6 /* normal_activity WatchKit App */,
 				30C9AC1B25203EE000A1AAA6 /* normal_activity WatchKit Extension */,
 				30C9AC0825203EDE00A1AAA6 /* Products */,
+				9FF540755FE1C2994E4C6C0F /* Pods */,
+				C4C7873DCBFCBFF78EA4E651 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +190,30 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9FF540755FE1C2994E4C6C0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14CD4726D8A45B8C9DA0404A /* Pods-normal_activity.debug.xcconfig */,
+				9E4ABC72C506EB14A923B9C9 /* Pods-normal_activity.release.xcconfig */,
+				A4ABB7F3E2E1B0C7E47ECDE1 /* Pods-normal_activity WatchKit App.debug.xcconfig */,
+				2BBEF77F63767BB7F42B62EF /* Pods-normal_activity WatchKit App.release.xcconfig */,
+				A71EB18A8449D81E3C6BF155 /* Pods-normal_activity WatchKit Extension.debug.xcconfig */,
+				F296BAFBD5FA6F2536AE33D0 /* Pods-normal_activity WatchKit Extension.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C4C7873DCBFCBFF78EA4E651 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4665A2484B93E5A2A0A4500 /* Pods_normal_activity.framework */,
+				AD23EE45E95C633D6D968F8F /* Pods_normal_activity_WatchKit_App.framework */,
+				8289859B38E3C15A83F46E7D /* Pods_normal_activity_WatchKit_Extension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,8 +221,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30C9AC3725203EE200A1AAA6 /* Build configuration list for PBXNativeTarget "normal_activity" */;
 			buildPhases = (
+				6210DE8F6165FD667A667540 /* [CP] Check Pods Manifest.lock */,
 				30C9AC0525203EDE00A1AAA6 /* Resources */,
 				30C9AC3625203EE200A1AAA6 /* Embed Watch Content */,
+				A6A34112F7DC3935F708046C /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -183,8 +240,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30C9AC3325203EE200A1AAA6 /* Build configuration list for PBXNativeTarget "normal_activity WatchKit App" */;
 			buildPhases = (
+				4A2965215A99860996186F4F /* [CP] Check Pods Manifest.lock */,
 				30C9AC0925203EDF00A1AAA6 /* Resources */,
 				30C9AC3225203EE200A1AAA6 /* Embed App Extensions */,
+				7C4403F5146DDF444AE3D1D3 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -200,9 +259,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30C9AC2F25203EE200A1AAA6 /* Build configuration list for PBXNativeTarget "normal_activity WatchKit Extension" */;
 			buildPhases = (
+				F35C8A4E5488437117DBA18C /* [CP] Check Pods Manifest.lock */,
 				30C9AC1325203EE000A1AAA6 /* Sources */,
 				30C9AC1425203EE000A1AAA6 /* Frameworks */,
 				30C9AC1525203EE000A1AAA6 /* Resources */,
+				FC8373CBB8650ED65C0DCF74 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,6 +344,92 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A2965215A99860996186F4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-normal_activity WatchKit App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6210DE8F6165FD667A667540 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-normal_activity-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F35C8A4E5488437117DBA18C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-normal_activity WatchKit Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC8373CBB8650ED65C0DCF74 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-normal_activity WatchKit Extension/Pods-normal_activity WatchKit Extension-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-normal_activity WatchKit Extension/Pods-normal_activity WatchKit Extension-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-normal_activity WatchKit Extension/Pods-normal_activity WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30C9AC1325203EE000A1AAA6 /* Sources */ = {
@@ -431,6 +578,7 @@
 		};
 		30C9AC3025203EE200A1AAA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A71EB18A8449D81E3C6BF155 /* Pods-normal_activity WatchKit Extension.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -455,6 +603,7 @@
 		};
 		30C9AC3125203EE200A1AAA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F296BAFBD5FA6F2536AE33D0 /* Pods-normal_activity WatchKit Extension.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
@@ -479,6 +628,7 @@
 		};
 		30C9AC3425203EE200A1AAA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4ABB7F3E2E1B0C7E47ECDE1 /* Pods-normal_activity WatchKit App.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -499,6 +649,7 @@
 		};
 		30C9AC3525203EE200A1AAA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BBEF77F63767BB7F42B62EF /* Pods-normal_activity WatchKit App.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -519,6 +670,7 @@
 		};
 		30C9AC3825203EE200A1AAA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14CD4726D8A45B8C9DA0404A /* Pods-normal_activity.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -532,6 +684,7 @@
 		};
 		30C9AC3925203EE200A1AAA6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E4ABC72C506EB14A923B9C9 /* Pods-normal_activity.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
